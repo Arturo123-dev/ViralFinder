@@ -1,0 +1,67 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/chris/Projects/ViralFinder/ViralFinder.iOS/ViralFinder.iOS.csproj": {}
+  },
+  "projects": {
+    "/Users/chris/Projects/ViralFinder/ViralFinder.iOS/ViralFinder.iOS.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/chris/Projects/ViralFinder/ViralFinder.iOS/ViralFinder.iOS.csproj",
+        "projectName": "ViralFinder.iOS",
+        "projectPath": "/Users/chris/Projects/ViralFinder/ViralFinder.iOS/ViralFinder.iOS.csproj",
+        "packagesPath": "/Users/chris/.nuget/packages/",
+        "outputPath": "/Users/chris/Projects/ViralFinder/ViralFinder.iOS/obj/",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "configFilePaths": [
+          "/Users/chris/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "xamarinios10"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "xamarinios10": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "xamarinios10": {
+          "dependencies": {
+            "FirebaseAuthentication.net": {
+              "target": "Package",
+              "version": "[3.4.0, )"
+            },
+            "FirebaseDatabase.net": {
+              "target": "Package",
+              "version": "[4.0.4, )"
+            },
+            "Xamarin.Essentials": {
+              "target": "Package",
+              "version": "[1.3.1, )"
+            },
+            "Xamarin.Forms": {
+              "target": "Package",
+              "version": "[4.4.0.991265, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    }
+  }
+}

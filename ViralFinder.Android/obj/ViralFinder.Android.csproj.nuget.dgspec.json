@@ -1,0 +1,56 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/chris/Projects/ViralFinder/ViralFinder.Android/ViralFinder.Android.csproj": {}
+  },
+  "projects": {
+    "/Users/chris/Projects/ViralFinder/ViralFinder.Android/ViralFinder.Android.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/chris/Projects/ViralFinder/ViralFinder.Android/ViralFinder.Android.csproj",
+        "projectName": "ViralFinder.Android",
+        "projectPath": "/Users/chris/Projects/ViralFinder/ViralFinder.Android/ViralFinder.Android.csproj",
+        "packagesPath": "/Users/chris/.nuget/packages/",
+        "outputPath": "/Users/chris/Projects/ViralFinder/ViralFinder.Android/obj/",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "configFilePaths": [
+          "/Users/chris/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "monoandroid90"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "monoandroid90": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "monoandroid90": {
+          "dependencies": {
+            "FirebaseAuthentication.net": {
+              "target": "Package",
+              "version": "[3.4.0, )"
+            },
+            "FirebaseDatabase.net": {
+              "target": "Package",
+              "version": "[4.0.4, )"
+            },
+            "Xamarin.Essentials": {
+              "target": "Package",
+              "version": "[1.3.1, )"
+            },
+            "Xamarin.Forms": {
+              "target": "Package",
+              "version": "[4.4.0.991265, )"
+            }
+          }
+        }
+      }
+    }
+  }
+}
