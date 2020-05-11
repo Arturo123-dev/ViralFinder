@@ -1,17 +1,42 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="ViralFinder.View.XF_LoginPage">
     <ContentPage.Content>
-         <StackLayout>
-            <Entry x:Name = "Email" Placeholder = "Email" Text="{Binding Email}"
-                   HeightRequest = "40"
-                   Keyboard = "Email"/>
-            <Entry x:Name = "Password" Text="{Binding Password}" Placeholder = "Password"
-                   HeightRequest = "40"
-                   IsPassword = "True"/>
-            <Button x:Name= "loginbtn" Text = "Login " 
-                    Command="{Binding LoginCommand}"
-                    HorizontalOptions = "FillAndExpand"/>
-            <Button x:Name="signup" Text="SignUp" Command="{Binding SignUp}" HorizontalOptions="End"/>
+         <StackLayout BackgroundColor="#3f729b">
+            <AbsoluteLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+
+                <Entry x:Name = "Email" Placeholder = "Email" Text="{Binding Email}"
+                       HeightRequest = "40"
+                       WidthRequest="200"
+                       Keyboard = "Email"
+                       AbsoluteLayout.LayoutBounds="0.5, 0.2"
+                       AbsoluteLayout.LayoutFlags="PositionProportional"/>
+
+                <Entry x:Name = "Password" Text="{Binding Password}" Placeholder = "Password"
+                       HeightRequest = "40"
+                       WidthRequest="200"
+                       IsPassword = "True"
+                       AbsoluteLayout.LayoutBounds="0.5, 0.3"
+                       AbsoluteLayout.LayoutFlags="PositionProportional"/>
+
+                <Button x:Name= "loginbtn" Text = "Login " 
+                        Command="{Binding LoginCommand}"
+                        TextColor="Black"
+                        HorizontalOptions = "FillAndExpand"
+                        AbsoluteLayout.LayoutBounds="0.5, 0.5"
+                        AbsoluteLayout.LayoutFlags="PositionProportional"
+                        BackgroundColor="Wheat"
+                        WidthRequest="90"/>
+
+                <Button x:Name="signup" Text="SignUp"
+                        Command="{Binding SignUp}"
+                        HorizontalOptions="End"
+                        TextColor="Black"
+                        AbsoluteLayout.LayoutBounds="0.5, 0.6"
+                        AbsoluteLayout.LayoutFlags="PositionProportional"
+                        BackgroundColor="Wheat"
+                        WidthRequest="90"/>
+
+            </AbsoluteLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

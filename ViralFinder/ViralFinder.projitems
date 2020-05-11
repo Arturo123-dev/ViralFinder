@@ -23,6 +23,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)View\PageMaster.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
@@ -45,6 +49,9 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)View\XF_SignUpPage.xaml.cs">
       <DependentUpon>XF_SignUpPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)View\PageMaster.xaml.cs">
+      <DependentUpon>PageMaster.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

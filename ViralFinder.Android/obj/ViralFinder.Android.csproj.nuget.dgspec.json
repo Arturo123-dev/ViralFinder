@@ -1,21 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "/Users/chris/Projects/ViralFinder/ViralFinder.Android/ViralFinder.Android.csproj": {}
+    "/Users/fabriziopiccolo/Projects/ViralFinder/ViralFinder.Android/ViralFinder.Android.csproj": {}
   },
   "projects": {
-    "/Users/chris/Projects/ViralFinder/ViralFinder.Android/ViralFinder.Android.csproj": {
+    "/Users/fabriziopiccolo/Projects/ViralFinder/ViralFinder.Android/ViralFinder.Android.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/chris/Projects/ViralFinder/ViralFinder.Android/ViralFinder.Android.csproj",
+        "projectUniqueName": "/Users/fabriziopiccolo/Projects/ViralFinder/ViralFinder.Android/ViralFinder.Android.csproj",
         "projectName": "ViralFinder.Android",
-        "projectPath": "/Users/chris/Projects/ViralFinder/ViralFinder.Android/ViralFinder.Android.csproj",
-        "packagesPath": "/Users/chris/.nuget/packages/",
-        "outputPath": "/Users/chris/Projects/ViralFinder/ViralFinder.Android/obj/",
+        "projectPath": "/Users/fabriziopiccolo/Projects/ViralFinder/ViralFinder.Android/ViralFinder.Android.csproj",
+        "packagesPath": "/Users/fabriziopiccolo/.nuget/packages/",
+        "outputPath": "/Users/fabriziopiccolo/Projects/ViralFinder/ViralFinder.Android/obj/",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "configFilePaths": [
-          "/Users/chris/.config/NuGet/NuGet.Config"
+          "/Users/fabriziopiccolo/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "monoandroid90"
@@ -42,11 +42,11 @@
             },
             "Xamarin.Essentials": {
               "target": "Package",
-              "version": "[1.3.1, )"
+              "version": "[1.5.3.1, )"
             },
             "Xamarin.Forms": {
               "target": "Package",
-              "version": "[4.4.0.991265, )"
+              "version": "[4.6.0.726, )"
             }
           }
         }
