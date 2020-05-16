@@ -6,6 +6,7 @@ public class MonoPackageManager_Resources {
 		"Firebase.Auth.dll",
 		"Firebase.dll",
 		"FormsViewGroup.dll",
+		"InstagramApiSharp.dll",
 		"LiteDB.dll",
 		"Newtonsoft.Json.dll",
 		"System.Reactive.dll",

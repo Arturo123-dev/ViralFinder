@@ -9,10 +9,10 @@ namespace ViralFinder.View
 	public partial class WelcomPage : ContentPage
 	{
 		WelcomePageVM welcomePageVM;
-		public WelcomPage(string email)
+		public WelcomPage()
 		{
 			InitializeComponent();
-			welcomePageVM = new WelcomePageVM(email);
+			welcomePageVM = new WelcomePageVM();
 			BindingContext = welcomePageVM;
 		}
 	}

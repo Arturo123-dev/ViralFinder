@@ -53,6 +53,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)View\PageMaster.xaml.cs">
       <DependentUpon>PageMaster.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModel\PageMasterModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Model\" />

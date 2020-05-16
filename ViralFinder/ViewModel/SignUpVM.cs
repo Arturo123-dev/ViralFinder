@@ -70,7 +70,8 @@ namespace ViralFinder.ViewModel
                     await App.Current.MainPage.DisplayAlert("SignUp Success", "", "Ok");
                     //Navigate to Wellcom page after successfuly SignUp
                     //pass user email to welcom page
-                    await App.Current.MainPage.Navigation.PushAsync(new WelcomPage(Email));
+                    await App.Current.MainPage.Navigation.PushModalAsync(new View.XF_LoginPage());
+                    //await App.Current.MainPage.Navigation.PushAsync(new WelcomPage());
                 }
                 else
                     await App.Current.MainPage.DisplayAlert("Error", "SignUp Fail", "OK");

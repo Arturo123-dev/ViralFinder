@@ -70,3 +70,4 @@
 /Users/fabriziopiccolo/Projects/ViralFinder/ViralFinder.iOS/obj/iPhoneSimulator/Debug/XamlC.stamp
 /Users/fabriziopiccolo/Projects/ViralFinder/ViralFinder.iOS/obj/iPhoneSimulator/Debug/ViralFinder.iOS.csproj.CopyComplete
 /Users/fabriziopiccolo/Projects/ViralFinder/ViralFinder.iOS/obj/iPhoneSimulator/Debug/ViralFinder.iOS.csprojAssemblyReference.cache
+/Users/fabriziopiccolo/Projects/ViralFinder/ViralFinder.iOS/bin/iPhoneSimulator/Debug/InstagramApiSharp.dll

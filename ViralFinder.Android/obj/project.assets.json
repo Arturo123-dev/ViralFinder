@@ -29,6 +29,18 @@
           "lib/netstandard2.0/Firebase.dll": {}
         }
       },
+      "InstagramApiSharp/1.5.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "10.0.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/InstagramApiSharp.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/InstagramApiSharp.dll": {}
+        }
+      },
       "LiteDB/4.1.4": {
         "type": "package",
         "dependencies": {
@@ -1404,6 +1416,23 @@
         "firebasedatabase.net.nuspec",
         "lib/netstandard2.0/Firebase.dll",
         "lib/netstandard2.0/Firebase.xml"
+      ]
+    },
+    "InstagramApiSharp/1.5.0.1": {
+      "sha512": "7WUoTAIS4X6bPAtvRVlu0U17WjNsGE5mO4y/IOLDCfnBblTXUCPANMiUdmZ9S8/0yQxMHVbeSjGti7eR9AsLAg==",
+      "type": "package",
+      "path": "instagramapisharp/1.5.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "instagramapisharp.1.5.0.1.nupkg.sha512",
+        "instagramapisharp.nuspec",
+        "lib/net452/InstagramApiSharp.dll",
+        "lib/netstandard1.3/InstagramApiSharp.dll",
+        "lib/netstandard2.0/InstagramApiSharp.dll",
+        "lib/uap10.0/InstagramApiSharp.dll",
+        "lib/uap10.0/InstagramApiSharp.pri"
       ]
     },
     "LiteDB/4.1.4": {
@@ -5391,6 +5420,7 @@
     "MonoAndroid,Version=v9.0": [
       "FirebaseAuthentication.net >= 3.4.0",
       "FirebaseDatabase.net >= 4.0.4",
+      "InstagramApiSharp >= 1.5.0.1",
       "Xamarin.Essentials >= 1.5.3.1",
       "Xamarin.Forms >= 4.6.0.726"
     ]
@@ -5433,6 +5463,10 @@
           "FirebaseDatabase.net": {
             "target": "Package",
             "version": "[4.0.4, )"
+          },
+          "InstagramApiSharp": {
+            "target": "Package",
+            "version": "[1.5.0.1, )"
           },
           "Xamarin.Essentials": {
             "target": "Package",

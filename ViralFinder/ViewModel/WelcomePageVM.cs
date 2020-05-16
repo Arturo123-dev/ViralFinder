@@ -7,9 +7,9 @@ namespace ViralFinder.ViewModel
 {
     public class WelcomePageVM : INotifyPropertyChanged
     {
-        public WelcomePageVM(string email2)
+        public WelcomePageVM()
         {
-            Email = email2;
+            
         }
         private string email;
 
