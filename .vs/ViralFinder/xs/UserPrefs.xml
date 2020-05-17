@@ -1,27 +1,24 @@
 ﻿<Properties StartupConfiguration="{8C7ABB75-0DAB-4BF0-B9E0-4733BE9F5E3A}|Default">
   <MonoDevelop.Ide.ItemProperties.ViralFinder.Android PreferredExecutionTarget="Android.pixel_2_pie_9_0_-_api_28" />
   <MonoDevelop.Ide.ItemProperties.ViralFinder.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.CB6B28FF-089A-405F-877C-23CD7A862458" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="ViralFinder/ViewModel/PageMasterModel.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ViralFinder/View/InstaLogin.xaml">
     <Files>
-      <File FileName="ViralFinder/View/XF_LoginPage.xaml.cs" Line="9" Column="52" />
-      <File FileName="ViralFinder/View/XF_LoginPage.xaml" />
-      <File FileName="ViralFinder/ViewModel/LoginViewModel.cs" />
-      <File FileName="ViralFinder/ViewModel/PageMasterModel.cs" Line="83" Column="13" />
-      <File FileName="ViralFinder/View/PageMaster.xaml" Line="84" Column="37" />
-      <File FileName="ViralFinder/View/PageMaster.xaml.cs" Line="20" Column="19" />
-      <File FileName="ViralFinder.iOS/Main.cs" Line="17" Column="1" />
+      <File FileName="ViralFinder/ViewModel/WelcomePageVM.cs" Line="71" Column="36" />
+      <File FileName="ViralFinder/View/WelcomPage.xaml" Line="37" Column="42" />
+      <File FileName="ViralFinder/View/InstaLogin.xaml" Line="38" Column="42" />
+      <File FileName="ViralFinder/View/InstaLogin.xaml.cs" Line="17" Column="10" />
+      <File FileName="ViralFinder/ViewModel/InstaLoginModel.cs" Line="54" Column="35" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="ViralFinder" expanded="True">
             <Node name="ViralFinder" expanded="True">
+              <Node name="Model" expanded="True" />
               <Node name="View" expanded="True">
-                <Node name="PageMaster.xaml" expanded="True" />
+                <Node name="InstaLogin.xaml" selected="True" />
               </Node>
-              <Node name="ViewModel" expanded="True">
-                <Node name="PageMasterModel.cs" selected="True" />
-              </Node>
+              <Node name="ViewModel" expanded="True" />
             </Node>
             <Node name="ViralFinder.iOS" expanded="True" />
           </Node>
@@ -32,13 +29,7 @@
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/fabriziopiccolo/Projects/ViralFinder/ViralFinder/ViewModel/PageMasterModel.cs" relfile="ViralFinder/ViewModel/PageMasterModel.cs" line="78" column="1" />
-      <Breakpoint file="/Users/fabriziopiccolo/Projects/ViralFinder/ViralFinder/ViewModel/PageMasterModel.cs" relfile="ViralFinder/ViewModel/PageMasterModel.cs" line="77" column="1" />
-      <Breakpoint file="/Users/fabriziopiccolo/Projects/ViralFinder/ViralFinder/ViewModel/PageMasterModel.cs" relfile="ViralFinder/ViewModel/PageMasterModel.cs" line="70" column="1" />
-      <Breakpoint file="/Users/fabriziopiccolo/Projects/ViralFinder/ViralFinder/ViewModel/PageMasterModel.cs" relfile="ViralFinder/ViewModel/PageMasterModel.cs" line="84" column="1" />
-      <Breakpoint file="/Users/fabriziopiccolo/Projects/ViralFinder/ViralFinder/ViewModel/PageMasterModel.cs" relfile="ViralFinder/ViewModel/PageMasterModel.cs" line="87" column="1" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>

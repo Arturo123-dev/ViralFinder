@@ -30,6 +30,15 @@
                         AbsoluteLayout.LayoutBounds="0.5, 0.6"
                         AbsoluteLayout.LayoutFlags="PositionProportional"/>
 
+                <Button x:Name="LogInsta"
+                        Text="LogIn Instagram"
+                        Command="{Binding LogInsta}"
+                        TextColor="White"
+                        BackgroundColor="#6d6d6d"
+                        WidthRequest="150"
+                        AbsoluteLayout.LayoutBounds="0.5,0.8"
+                        AbsoluteLayout.LayoutFlags="PositionProportional"
+                        /> 
                 
 
             </AbsoluteLayout>

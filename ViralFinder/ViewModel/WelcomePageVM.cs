@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Diagnostics;
+using ViralFinder.View;
 using Xamarin.Forms;
 
 namespace ViralFinder.ViewModel
@@ -31,6 +32,7 @@ namespace ViralFinder.ViewModel
                 PropertyChanged(this, new PropertyChangedEventArgs("Password"));
             }
         }
+
         public Command UpdateCommand
         {
             get { return new Command(Update); }
@@ -51,6 +53,20 @@ namespace ViralFinder.ViewModel
                 });
             }
         }
+
+
+        public Command LogInsta
+        {
+            get
+            {
+                return new Command(() =>
+                {
+                    
+                    App.Current.MainPage.Navigation.PushModalAsync(new InstaLogin());
+                });
+            }
+        }
+
         //Update user data
         private async void Update()
         {

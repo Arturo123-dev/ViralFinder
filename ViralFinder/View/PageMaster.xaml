@@ -35,7 +35,8 @@
                                 AbsoluteLayout.LayoutFlags="PositionProportional"
                                 WidthRequest="130"
                                 />
-                        
+
+
                     </AbsoluteLayout>
                 </StackLayout>
             </ContentPage.Content>
