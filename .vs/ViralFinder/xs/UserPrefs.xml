@@ -1,24 +1,29 @@
 ﻿<Properties StartupConfiguration="{8C7ABB75-0DAB-4BF0-B9E0-4733BE9F5E3A}|Default">
   <MonoDevelop.Ide.ItemProperties.ViralFinder.Android PreferredExecutionTarget="Android.pixel_2_pie_9_0_-_api_28" />
   <MonoDevelop.Ide.ItemProperties.ViralFinder.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.CB6B28FF-089A-405F-877C-23CD7A862458" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="ViralFinder/View/InstaLogin.xaml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ViralFinder/ViewModel/FirebaseHelper.cs">
     <Files>
-      <File FileName="ViralFinder/ViewModel/WelcomePageVM.cs" Line="71" Column="36" />
-      <File FileName="ViralFinder/View/WelcomPage.xaml" Line="37" Column="42" />
-      <File FileName="ViralFinder/View/InstaLogin.xaml" Line="38" Column="42" />
+      <File FileName="ViralFinder/View/InstaLogin.xaml" Line="50" Column="1" />
       <File FileName="ViralFinder/View/InstaLogin.xaml.cs" Line="17" Column="10" />
-      <File FileName="ViralFinder/ViewModel/InstaLoginModel.cs" Line="54" Column="35" />
+      <File FileName="ViralFinder/ViewModel/InstaLoginModel.cs" Line="50" Column="39" />
+      <File FileName="ViralFinder/Classi/InstaClass.cs" Line="66" Column="1" />
+      <File FileName="ViralFinder/View/PageMaster.xaml.cs" Line="14" Column="1" />
+      <File FileName="ViralFinder/ViewModel/PageMasterModel.cs" Line="12" Column="1" />
+      <File FileName="ViralFinder/ViewModel/FirebaseHelper.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="ViralFinder" expanded="True">
             <Node name="ViralFinder" expanded="True">
-              <Node name="Model" expanded="True" />
+              <Node name="Classi" expanded="True" />
               <Node name="View" expanded="True">
-                <Node name="InstaLogin.xaml" selected="True" />
+                <Node name="InstaLogin.xaml" expanded="True" />
+                <Node name="PageMaster.xaml" expanded="True" />
               </Node>
-              <Node name="ViewModel" expanded="True" />
+              <Node name="ViewModel" expanded="True">
+                <Node name="FirebaseHelper.cs" selected="True" />
+              </Node>
             </Node>
             <Node name="ViralFinder.iOS" expanded="True" />
           </Node>

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 using Xamarin.Forms;
+using ViralFinder.Classi;
 
 namespace ViralFinder.ViewModel
 {
@@ -45,7 +46,7 @@ namespace ViralFinder.ViewModel
                 return new Command(() => { App.Current.MainPage.Navigation.PopModalAsync(); });
             }
         }
-
+        
         public Command InstaLogCommand
         {
             get { return new Command(LogInsta); }
@@ -54,7 +55,10 @@ namespace ViralFinder.ViewModel
         //funzione per login insta
         public async void LogInsta()
         {
+            var insta = new InstaClass(username, password);
+            await insta.InstagramLogin();
 
+            await App.Current.MainPage.Navigation.PopModalAsync();
         }
     }
 }

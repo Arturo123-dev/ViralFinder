@@ -8,12 +8,13 @@
                 <Label Text="LOGIN CON DATI DI INSTAGRAM"
                        AbsoluteLayout.LayoutBounds="0.5,0.2"
                        AbsoluteLayout.LayoutFlags="PositionProportional"
+                       TextColor="White"
                        />
-
+                
                 <Button x:Name="Back"
                         Command="{Binding BackCommand}"
                         Text="BACK" 
-                        TextColor="Black"
+                        TextColor="White"
                         AbsoluteLayout.LayoutBounds="0.1,0.1"
                         AbsoluteLayout.LayoutFlags="PositionProportional"
                         />
@@ -35,7 +36,7 @@
                         AbsoluteLayout.LayoutBounds="0.5,0.6"
                         AbsoluteLayout.LayoutFlags="PositionProportional"
                         Text="Login to Instagram"
-                        TextColor="Black"
+                        TextColor="White"
                         WidthRequest="180"
                         BackgroundColor="#6d6d6d" 
                         />
