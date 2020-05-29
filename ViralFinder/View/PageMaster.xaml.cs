@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using ViralFinder.ViewModel;
 using Xamarin.Forms;
 using ViralFinder.Classi;
+using InstagramApiSharp.API;
 
 namespace ViralFinder.View
 {
     public partial class PageMaster : MasterDetailPage
     {
         PageMasterModel pageMasterModel;
+
+        private InstaClass insta;
 
 
 
@@ -17,6 +20,14 @@ namespace ViralFinder.View
             InitializeComponent();
             pageMasterModel = new PageMasterModel();
             BindingContext = pageMasterModel;
+        }
+
+        public PageMaster(InstaClass insta)
+        {
+            InitializeComponent();
+            pageMasterModel = new PageMasterModel(insta);
+            BindingContext = pageMasterModel;
+            this.insta = insta;   
         }
 
 

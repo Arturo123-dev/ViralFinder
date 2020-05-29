@@ -52,13 +52,22 @@ namespace ViralFinder.ViewModel
             get { return new Command(LogInsta); }
         }
 
+
+        
+
         //funzione per login insta
         public async void LogInsta()
         {
             var insta = new InstaClass(username, password);
             await insta.InstagramLogin();
 
+            //saveInstaData(username, password);
+
+            MessagingCenter.Send<InstaLoginModel, InstaClass>(this, "instaApi", insta);
+
             await App.Current.MainPage.Navigation.PopModalAsync();
         }
+
+       
     }
 }

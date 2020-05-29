@@ -9,18 +9,23 @@ using InstagramApiSharp.Classes;
 using InstagramApiSharp.API.Builder;
 using InstagramApiSharp.Logger;
 using InstagramApiSharp.Classes.Models;
-
-
+using ViralFinder.Classi;
 
 namespace ViralFinder.ViewModel
 {
     public class PageMasterModel : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
-        //private readonly IInstaApi instaApi;
+        private InstaClass insta = null;
+
         public PageMasterModel()
         {
 
+        }
+
+        public PageMasterModel(InstaClass insta)
+        {
+            this.insta = insta;
         }
 
         private string hashtag;
@@ -58,8 +63,23 @@ namespace ViralFinder.ViewModel
 
         private async void Search()
         {
-
             
+            if (this.insta == null)
+            {
+                MessagingCenter.Subscribe<PageMasterModel, IInstaApi>(this.insta, "instaApi", (sender, arg) =>
+                 {
+                     this.insta =(InstaClass) arg;
+                 });
+            }
+
+            if (insta.IsLogged())
+            {
+                Console.WriteLine("---------SONO LOGGATO---------");
+            }
+            else
+            {
+                Console.WriteLine("---------NON SONO STATI PASSATI DATI----------");
+            }
        
 
         }

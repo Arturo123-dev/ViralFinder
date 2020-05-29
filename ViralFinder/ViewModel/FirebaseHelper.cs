@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Firebase.Database;
 using Firebase.Database.Query;
+using ViralFinder.Classi;
 using ViralFinder.Model;
 
 namespace ViralFinder.ViewModel
@@ -62,7 +63,7 @@ namespace ViralFinder.ViewModel
 
                 await firebase
                 .Child("Users")
-                .PostAsync(new Users() { Email = email, Password = password });
+                .PostAsync(new Users() { Email = email, Password = password, IgUser = new InstagramUser("null", "null") });
                 return true;
             }
             catch (Exception e)
@@ -113,6 +114,44 @@ namespace ViralFinder.ViewModel
                 Debug.WriteLine($"Error:{e}");
                 return false;
             }
+        }
+
+        public static async Task<bool> existInstaAccount(string email)
+        {
+
+            try
+            {
+                var allUsers = await GetAllUser();
+                await firebase
+                .Child("Users")
+                .OnceAsync<Users>();
+                allUsers.Where(a => a.Email == email).FirstOrDefault();
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine($"Error:{e}");
+                return null;
+            }
+
+         
+
+
+        }
+
+
+        public static async Task<InstagramUser> getInstaUser(String email)
+        {
+            return null;
+
+        }
+
+        public static async Task<bool> saveInstaData(string username, string password)
+        {
+
+
+
+            return false;
+
         }
 
     }

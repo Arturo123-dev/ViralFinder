@@ -14,6 +14,7 @@ namespace ViralFinder.Classi
         private static IInstaApi api;
 
 
+
         public InstaClass(String username, String pwd)
         {
             UserData = new UserSessionData
@@ -27,6 +28,13 @@ namespace ViralFinder.Classi
                   .UseLogger(new DebugLogger(LogLevel.All))
                   .SetRequestDelay(RequestDelay.FromSeconds(0, 1))
                   .Build();
+        }
+
+
+        public Boolean IsLogged()
+        {
+            return api.IsUserAuthenticated;
+
         }
 
 

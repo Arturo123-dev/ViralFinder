@@ -63,6 +63,7 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)ViewModel\InstaLoginModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Classi\InstaClass.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\InstagramUser.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Model\" />

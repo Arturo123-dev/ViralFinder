@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
+using ViralFinder.Model;
 using ViralFinder.View;
 using Xamarin.Forms;
 
@@ -66,8 +67,24 @@ namespace ViralFinder.ViewModel
                         //Navigate to Wellcom page after successfuly login
                         //pass user email to welcom page
 
+
+
+                        /* if (!existInstaAccount(email))
+                        {
+                            await App.Current.MainPage.Navigation.PushModalAsync(new PageMaster());
+                        }
+                        else
+                        {   //controlla se esiste ig
+
+
+                            var ig = getInstaUser(email);
+
+
+                            await App.Current.MainPage.Navigation.PushModalAsync(new PageMaster(ig));
+                        }*/
+
                         await App.Current.MainPage.Navigation.PushModalAsync(new PageMaster());
-                        //await App.Current.MainPage.Navigation.PushAsync(new PageMaster());
+
                     }
                     else
                         await App.Current.MainPage.DisplayAlert("Login Fail", "Please enter correct Email and Password", "OK");
