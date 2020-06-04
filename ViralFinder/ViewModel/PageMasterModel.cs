@@ -42,17 +42,7 @@ namespace ViralFinder.ViewModel
             }
         }
 
-        private string dimensioni;
-        public string Dimensioni
-        {
-            get { return dimensioni; }
-            set
-            {
-                dimensioni = value;
-                PropertyChanged(this, new PropertyChangedEventArgs("Dimensioni"));
-            }
-
-        }
+        
 
 
         public Command SearchCommand
@@ -66,18 +56,15 @@ namespace ViralFinder.ViewModel
 
         private async void Search()
         {
+<<<<<<< Updated upstream
             
             
+=======
+>>>>>>> Stashed changes
 
-            if (insta.IsLogged())
-            {
-                Console.WriteLine("---------SONO LOGGATO---------");
-            }
-            else
-            {
-                Console.WriteLine("---------NON SONO STATI PASSATI DATI----------");
-            }
-       
+            // var n = insta.GetTopHashtagAvgLike(hashtag);
+          
+
 
         }
     }

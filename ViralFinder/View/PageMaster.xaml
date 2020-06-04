@@ -56,9 +56,9 @@
                         <StackLayout AbsoluteLayout.LayoutBounds="0.5,0.2"
                                      AbsoluteLayout.LayoutFlags="PositionProportional"
                                      BackgroundColor="#008080"
-                                     HeightRequest="150"
+                                     HeightRequest="100"
                                      WidthRequest="300"
-                                     Spacing="20"
+                                     Spacing="22"
                                      >
 
                             <Entry x:Name="Hashtag"
@@ -69,14 +69,7 @@
                                    WidthRequest="200"
                                    
                                    />
-                            <Entry x:Name="Dimensioni"
-                                   BackgroundColor="White"
-                                   Text="{Binding Dimensioni}"
-                                   Placeholder="Num max"
-                                   WidthRequest="200"
-                                   HorizontalOptions="Center"
-                                   
-                                   />
+
                             <Button x:Name="Search"
                                     Text="CERCA"
                                     TextColor="White"

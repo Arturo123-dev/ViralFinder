@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Threading.Tasks;
+using InstagramApiSharp;
 using InstagramApiSharp.API;
 using InstagramApiSharp.API.Builder;
 using InstagramApiSharp.Classes;
+using InstagramApiSharp.Classes.Models;
 using InstagramApiSharp.Logger;
 
 namespace ViralFinder.Classi
@@ -72,11 +74,71 @@ namespace ViralFinder.Classi
         }
 
 
+        public async Task<long> GetHashtagNumber(String hashtag)
+        {
+
+            var tagfeed = await api.HashtagProcessor.GetHashtagInfoAsync(hashtag);
+            Console.WriteLine("-------------" + tagfeed.Value.MediaCount + "-------------");
+            return tagfeed.Value.MediaCount;
+
+        }
+
+
+        public async Task<long> GetTopHashtagAvgLike(String hashtag)
+        {
+
+            var tagfeed = await api.HashtagProcessor.GetTopHashtagMediaListAsync(hashtag, PaginationParameters.MaxPagesToLoad(2) );
+            var mediaList = tagfeed.Value.Medias;
+            Console.WriteLine("--------- NUMERO TOP MEDIA: " + mediaList.Count);
+
+            int i = 0;
+            int avg = 0;
+            foreach(InstaMedia media in mediaList)
+            {
+                i++;
+                avg = avg + media.LikesCount;
+               
+
+                Console.WriteLine("------------" + media.LikesCount);
+            }
+            Console.WriteLine("------------" + avg/i + "--------------");
 
 
 
 
+            return avg / i;
 
+        }
+
+        public async Task<long> GetTopHashtagCommentAvg(String hashtag)
+        {
+            var tagfeed = await api.HashtagProcessor.GetTopHashtagMediaListAsync(hashtag, PaginationParameters.MaxPagesToLoad(2));
+            var mediaList = tagfeed.Value.Medias;
+
+            int i = 0;
+            int tot = 0;
+
+            foreach (InstaMedia media in mediaList)
+            {
+                i++;
+                tot = tot + int.Parse(media.CommentsCount);
+               
+            }
+            Console.WriteLine("----------" + tot / i + "---------");
+            return tot / i;
+        }
+
+
+
+        public async Task ig(String hashtag)
+        {
+            var tagFeed = await api.HashtagProcessor.GetRecentHashtagMediaListAsync(hashtag, PaginationParameters.MaxPagesToLoad(2));
+            var list = tagFeed.Value.Medias;
+            foreach(InstaMedia i in list)
+            {
+                //
+            }
+        }
 
     }
 
