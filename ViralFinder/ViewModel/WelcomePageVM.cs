@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Diagnostics;
+using ViralFinder.Model;
 using ViralFinder.View;
 using Xamarin.Forms;
 
@@ -8,16 +9,11 @@ namespace ViralFinder.ViewModel
 {
     public class WelcomePageVM : INotifyPropertyChanged
     {
-        public WelcomePageVM()
-        {
-            
-        }
-        private string email;
+        private Users user;
 
-        public string Email
+        public WelcomePageVM(Users user)
         {
-            get { return email; }
-            set { email = value; }
+            this.user = user;
         }
         private string password;
 
@@ -62,7 +58,7 @@ namespace ViralFinder.ViewModel
                 return new Command(() =>
                 {
                     
-                    App.Current.MainPage.Navigation.PushModalAsync(new InstaLogin());
+                    App.Current.MainPage.Navigation.PushModalAsync(new InstaLogin(user));
                 });
             }
         }
@@ -74,7 +70,7 @@ namespace ViralFinder.ViewModel
             {
                 if (!string.IsNullOrEmpty(Password))
                 {
-                    var isupdate = await FirebaseHelper.UpdateUser(Email, Password);
+                    var isupdate = await FirebaseHelper.UpdateUser(user.Email, Password);
                     if (isupdate)
                         await App.Current.MainPage.DisplayAlert("Update Success", "", "Ok");
                     else
@@ -94,7 +90,7 @@ namespace ViralFinder.ViewModel
         {
             try
             {
-                var isdelete = await FirebaseHelper.DeleteUser(Email);
+                var isdelete = await FirebaseHelper.DeleteUser(user.Email);
                 if (isdelete)
                     await App.Current.MainPage.Navigation.PopAsync();
                 else

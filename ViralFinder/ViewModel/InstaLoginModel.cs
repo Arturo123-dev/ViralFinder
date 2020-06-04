@@ -2,13 +2,17 @@
 using System.ComponentModel;
 using Xamarin.Forms;
 using ViralFinder.Classi;
+using ViralFinder.Model;
+using ViralFinder.View;
 
 namespace ViralFinder.ViewModel
 {
     public class InstaLoginModel : INotifyPropertyChanged
     {
-        public InstaLoginModel()
+        private Users user;
+        public InstaLoginModel(Users user)
         {
+            this.user = user;
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -61,11 +65,16 @@ namespace ViralFinder.ViewModel
             var insta = new InstaClass(username, password);
             await insta.InstagramLogin();
 
-            //saveInstaData(username, password);
+            if(await FirebaseHelper.SaveInstaData(username, password, user))
+            {
+                await App.Current.MainPage.DisplayAlert("Login Success", "", "Ok");
+            }
+            else
+            {
+                await App.Current.MainPage.DisplayAlert("Login Fail", "", "OK");
+            }
 
-            MessagingCenter.Send<InstaLoginModel, InstaClass>(this, "instaApi", insta);
-
-            await App.Current.MainPage.Navigation.PopModalAsync();
+             await App.Current.MainPage.Navigation.PushModalAsync(new PageMaster(insta, user));
         }
 
        

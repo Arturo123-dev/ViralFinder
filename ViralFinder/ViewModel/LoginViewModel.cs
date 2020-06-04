@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
+using ViralFinder.Classi;
 using ViralFinder.Model;
 using ViralFinder.View;
 using Xamarin.Forms;
@@ -67,23 +68,19 @@ namespace ViralFinder.ViewModel
                         //Navigate to Wellcom page after successfuly login
                         //pass user email to welcom page
 
+                        var esisteInsta = await FirebaseHelper.ExistInstaAccount(Email); //non funziona
 
-
-                        /* if (!existInstaAccount(email))
+                        if (esisteInsta) //verifica l' esitenza di InstaUser
                         {
-                            await App.Current.MainPage.Navigation.PushModalAsync(new PageMaster());
+                            var ig = await FirebaseHelper.GetInstaUser(Email); //non so ancora se funziona
+                            var insta = new InstaClass(ig.Username, ig.InstaPassword);
+                            await insta.InstagramLogin();
+                            await App.Current.MainPage.Navigation.PushModalAsync(new PageMaster(insta, user));
                         }
                         else
-                        {   //controlla se esiste ig
-
-
-                            var ig = getInstaUser(email);
-
-
-                            await App.Current.MainPage.Navigation.PushModalAsync(new PageMaster(ig));
-                        }*/
-
-                        await App.Current.MainPage.Navigation.PushModalAsync(new PageMaster());
+                        {
+                            await App.Current.MainPage.Navigation.PushModalAsync(new PageMaster(user));
+                        }
 
                     }
                     else

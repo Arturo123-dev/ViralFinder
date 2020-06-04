@@ -10,6 +10,7 @@ using InstagramApiSharp.API.Builder;
 using InstagramApiSharp.Logger;
 using InstagramApiSharp.Classes.Models;
 using ViralFinder.Classi;
+using ViralFinder.Model;
 
 namespace ViralFinder.ViewModel
 {
@@ -17,14 +18,16 @@ namespace ViralFinder.ViewModel
     {
         public event PropertyChangedEventHandler PropertyChanged;
         private InstaClass insta = null;
+        private Users user;
 
         public PageMasterModel()
         {
 
         }
 
-        public PageMasterModel(InstaClass insta)
+        public PageMasterModel(InstaClass insta, Users user)
         {
+            this.user = user;
             this.insta = insta;
         }
 
@@ -64,13 +67,7 @@ namespace ViralFinder.ViewModel
         private async void Search()
         {
             
-            if (this.insta == null)
-            {
-                MessagingCenter.Subscribe<PageMasterModel, IInstaApi>(this.insta, "instaApi", (sender, arg) =>
-                 {
-                     this.insta =(InstaClass) arg;
-                 });
-            }
+            
 
             if (insta.IsLogged())
             {

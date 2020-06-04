@@ -25,7 +25,7 @@ namespace ViralFinder.ViewModel
                 new Users
                 {
                     Email = item.Object.Email,
-                    Password = item.Object.Password
+                    Password = item.Object.Password,
                 }).ToList();
                 return userlist;
             }
@@ -63,7 +63,7 @@ namespace ViralFinder.ViewModel
 
                 await firebase
                 .Child("Users")
-                .PostAsync(new Users() { Email = email, Password = password, IgUser = new InstagramUser("null", "null") });
+                .PostAsync(new Users() { Email = email, Password = password});
                 return true;
             }
             catch (Exception e)
@@ -116,43 +116,82 @@ namespace ViralFinder.ViewModel
             }
         }
 
-        public static async Task<bool> existInstaAccount(string email)
+        public static async Task<bool> ExistInstaAccount(string email)
         {
-
             try
             {
-                var allUsers = await GetAllUser();
-                await firebase
+                var userlist = (await firebase
                 .Child("Users")
-                .OnceAsync<Users>();
-                allUsers.Where(a => a.Email == email).FirstOrDefault();
+                .OnceAsync<Users>()).Select(item =>
+                new Users
+                {
+                    Email = item.Object.Email,
+                    IgUser = item.Object.IgUser
+                }).ToList();
+
+                var ig = userlist.Where(a => a.Email == email).FirstOrDefault();
+
+                if(ig.IgUser != null)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine($"Error:{e}");
+                return false;
+            }
+        }
+
+
+        public static async Task<InstagramUser> GetInstaUser(String email)
+        {
+            try
+            {
+                var userlist = (await firebase
+                 .Child("Users")
+                 .OnceAsync<Users>()).Select(item =>
+                 new Users
+                 {
+                     Email = item.Object.Email,
+                     IgUser = item.Object.IgUser
+                 }).ToList();
+
+                var ig = userlist.Where(a => a.Email == email).FirstOrDefault();
+                return ig.IgUser;
             }
             catch (Exception e)
             {
                 Debug.WriteLine($"Error:{e}");
                 return null;
             }
-
-         
-
-
         }
 
-
-        public static async Task<InstagramUser> getInstaUser(String email)
+        public static async Task<bool> SaveInstaData(string username, string password, Users user)
         {
-            return null;
+            try
+            {
 
+
+                var toUpdateUser = (await firebase
+                .Child("Users")
+                .OnceAsync<Users>()).Where(a => a.Object.Email == user.Email).FirstOrDefault();
+                await firebase
+                .Child("Users")
+                .Child(toUpdateUser.Key)
+                .PutAsync(new Users() { Email = user.Email, Password = user.Password, IgUser = new InstagramUser(username, password)});
+                return true;
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine($"Error:{e}");
+                return false;
+            }
         }
-
-        public static async Task<bool> saveInstaData(string username, string password)
-        {
-
-
-
-            return false;
-
-        }
-
     }
 }

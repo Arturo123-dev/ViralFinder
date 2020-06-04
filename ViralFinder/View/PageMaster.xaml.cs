@@ -4,6 +4,7 @@ using ViralFinder.ViewModel;
 using Xamarin.Forms;
 using ViralFinder.Classi;
 using InstagramApiSharp.API;
+using ViralFinder.Model;
 
 namespace ViralFinder.View
 {
@@ -13,34 +14,34 @@ namespace ViralFinder.View
 
         private InstaClass insta;
 
+        Users user;
 
-
-        public PageMaster()
+        public PageMaster(Users user)
         {
+            this.user = user;
             InitializeComponent();
             pageMasterModel = new PageMasterModel();
             BindingContext = pageMasterModel;
         }
 
-        public PageMaster(InstaClass insta)
+        public PageMaster(InstaClass insta, Users user)
         {
             InitializeComponent();
-            pageMasterModel = new PageMasterModel(insta);
+            pageMasterModel = new PageMasterModel(insta, user);
             BindingContext = pageMasterModel;
             this.insta = insta;   
         }
 
 
 
-
         void impostazioni_Clicked(System.Object sender, System.EventArgs e)
         {
-            Detail = new NavigationPage(new WelcomPage());
+            Detail = new NavigationPage(new WelcomPage(user));
         }
 
         void Home_Clicked(System.Object sender, System.EventArgs e)
         {
-            Detail = new NavigationPage(new PageMaster());
+            Detail = new NavigationPage(new PageMaster(user));
         }
     }
 }
