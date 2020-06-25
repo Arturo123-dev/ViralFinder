@@ -36,6 +36,13 @@
                         BackgroundColor="Wheat"
                         WidthRequest="90"/>
 
+                <ActivityIndicator Color="White"
+                                   Scale="1.7"
+                                   IsRunning="{Binding Active}"
+                                   IsVisible="{Binding Active}"
+                                   AbsoluteLayout.LayoutFlags="PositionProportional"
+                                   AbsoluteLayout.LayoutBounds="0.5,0.4"/>
+
             </AbsoluteLayout>
         </StackLayout>
     </ContentPage.Content>

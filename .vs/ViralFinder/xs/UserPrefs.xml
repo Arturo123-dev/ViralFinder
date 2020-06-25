@@ -1,32 +1,29 @@
 ﻿<Properties StartupConfiguration="{8C7ABB75-0DAB-4BF0-B9E0-4733BE9F5E3A}|Default">
   <MonoDevelop.Ide.ItemProperties.ViralFinder.Android PreferredExecutionTarget="Android.pixel_2_pie_9_0_-_api_28" />
   <MonoDevelop.Ide.ItemProperties.ViralFinder.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.CB6B28FF-089A-405F-877C-23CD7A862458" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="ViralFinder/Classi/InstaClass.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ViralFinder/View/PageMaster.xaml">
     <Files>
-      <File FileName="ViralFinder/Classi/InstaClass.cs" Line="146" Column="1" />
-      <File FileName="ViralFinder/ViewModel/PageMasterModel.cs" Line="66" Column="11" />
-      <File FileName="ViralFinder/ViewModel/InstaLoginModel.cs" />
-      <File FileName="ViralFinder/View/PageMaster.xaml.cs" Line="1" Column="1" />
-      <File FileName="ViralFinder/View/PageMaster.xaml" Line="61" Column="49" />
-      <File FileName="ViralFinder/ViewModel/LoginViewModel.cs" Line="83" Column="26" />
-      <File FileName="ViralFinder/ViewModel/FirebaseHelper.cs" Line="83" Column="51" />
+      <File FileName="ViralFinder/View/PageMaster.xaml" Line="120" Column="1" />
+      <File FileName="ViralFinder/View/PageMaster.xaml.cs" Line="66" Column="12" />
+      <File FileName="ViralFinder/ViewModel/PageMasterModel.cs" Line="198" Column="1" />
+      <File FileName="ViralFinder/Classi/InstaClass.cs" Line="189" Column="31" />
+      <File FileName="ViralFinder.iOS/Main.cs" Line="17" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="ViralFinder" expanded="True">
             <Node name="ViralFinder" expanded="True">
-              <Node name="Classi" expanded="True">
-                <Node name="InstaClass.cs" selected="True" />
-              </Node>
-              <Node name="Model" expanded="True" />
+              <Node name="Classi" expanded="True" />
               <Node name="View" expanded="True">
-                <Node name="PageMaster.xaml" expanded="True" />
+                <Node name="OldHashtag.xaml" expanded="True" />
+                <Node name="PageMaster.xaml" expanded="True" selected="True" />
               </Node>
               <Node name="ViewModel" expanded="True" />
-              <Node name="MainPage.xaml" expanded="True" />
             </Node>
-            <Node name="ViralFinder.iOS" expanded="True" />
+            <Node name="ViralFinder.iOS" expanded="True">
+              <Node name="Packages" expanded="True" />
+            </Node>
           </Node>
         </State>
       </Pad>

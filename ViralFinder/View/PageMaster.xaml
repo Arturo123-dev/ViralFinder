@@ -1,5 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="ViralFinder.View.PageMaster" xmlns:pages="clr-namespace:ViralFinder.View" Title="PageMaster">
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  x:Class="ViralFinder.View.PageMaster"
+                  xmlns:pages="clr-namespace:ViralFinder.View"
+                  xmlns:forms="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
+                  xmlns:microcharts="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms" 
+                  xmlns:local="clr-namespace:Microcharts.Samples.Forms" 
+                  Title="PageMaster">
+
     <MasterDetailPage.Master>
 
         <ContentPage Title="MENU">
@@ -27,10 +35,10 @@
                                 />
 
                         <Button x:Name="ricercheSalvate"
-                                Text="# SALVATI"
+                                Text="# RECENTI"
                                 BackgroundColor="#6d6d6d"
                                 TextColor="White"
-                                
+                                Clicked="ricercheSalvate_Clicked"
                                 AbsoluteLayout.LayoutBounds="0.5, 0.4"
                                 AbsoluteLayout.LayoutFlags="PositionProportional"
                                 WidthRequest="130"
@@ -53,7 +61,7 @@
                     <AbsoluteLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
 
 
-                        <StackLayout AbsoluteLayout.LayoutBounds="0.5,0.2"
+                        <StackLayout AbsoluteLayout.LayoutBounds="0.5,0.1"
                                      AbsoluteLayout.LayoutFlags="PositionProportional"
                                      BackgroundColor="#008080"
                                      HeightRequest="100"
@@ -78,7 +86,41 @@
                                     
                                     />
 
+                            
+                        </StackLayout>
+                        
+                        
+                        <StackLayout BackgroundColor="White"
+                                     AbsoluteLayout.LayoutFlags="All"
+                                     AbsoluteLayout.LayoutBounds="0.5,1,1,0.7">
 
+                             
+                            <ScrollView Orientation="Vertical">
+                                <StackLayout>
+
+                                    <Label x:Name="Npost" Text="{Binding Npost}" HorizontalOptions="Center"/>
+                        
+
+                                    <forms:ChartView x:Name="Grafico" HeightRequest="200"/>
+
+                                    
+                                    <Label x:Name="AvgLike" Text="{Binding AvgLike}" HorizontalOptions="Center"/>
+
+
+                                    <forms:ChartView x:Name="GraficoCommenti" HeightRequest="200"/>
+
+
+                                    <Label x:Name="AvgComm" Text="{Binding AvgComm}" HorizontalOptions="Center"/>
+
+                                    <Label Text="PUNTEGGIO HASHTAG" HorizontalOptions="Center"/>
+
+                                   
+                                    <Label x:Name="Punteggio" Text="{Binding Punteggio}" HorizontalOptions="Center" FontSize="Header"/>
+
+                                </StackLayout>
+
+                            </ScrollView>
+  
                         </StackLayout>
 
                     </AbsoluteLayout>

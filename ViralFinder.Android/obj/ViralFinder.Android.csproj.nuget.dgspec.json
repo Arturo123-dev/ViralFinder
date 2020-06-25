@@ -1,21 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "/Users/chris/Downloads/ViralFinder-master/ViralFinder.Android/ViralFinder.Android.csproj": {}
+    "/Users/fabriziopiccolo/Projects/ViralFinder/ViralFinder.Android/ViralFinder.Android.csproj": {}
   },
   "projects": {
-    "/Users/chris/Downloads/ViralFinder-master/ViralFinder.Android/ViralFinder.Android.csproj": {
+    "/Users/fabriziopiccolo/Projects/ViralFinder/ViralFinder.Android/ViralFinder.Android.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/chris/Downloads/ViralFinder-master/ViralFinder.Android/ViralFinder.Android.csproj",
+        "projectUniqueName": "/Users/fabriziopiccolo/Projects/ViralFinder/ViralFinder.Android/ViralFinder.Android.csproj",
         "projectName": "ViralFinder.Android",
-        "projectPath": "/Users/chris/Downloads/ViralFinder-master/ViralFinder.Android/ViralFinder.Android.csproj",
-        "packagesPath": "/Users/chris/.nuget/packages/",
-        "outputPath": "/Users/chris/Downloads/ViralFinder-master/ViralFinder.Android/obj/",
+        "projectPath": "/Users/fabriziopiccolo/Projects/ViralFinder/ViralFinder.Android/ViralFinder.Android.csproj",
+        "packagesPath": "/Users/fabriziopiccolo/.nuget/packages/",
+        "outputPath": "/Users/fabriziopiccolo/Projects/ViralFinder/ViralFinder.Android/obj/",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "configFilePaths": [
-          "/Users/chris/.config/NuGet/NuGet.Config"
+          "/Users/fabriziopiccolo/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "monoandroid90"
@@ -43,6 +43,18 @@
             "InstagramApiSharp": {
               "target": "Package",
               "version": "[1.5.0.1, )"
+            },
+            "Microcharts": {
+              "target": "Package",
+              "version": "[0.7.1, )"
+            },
+            "SkiaSharp": {
+              "target": "Package",
+              "version": "[1.68.3, )"
+            },
+            "SkiaSharp.Views.Forms": {
+              "target": "Package",
+              "version": "[1.68.3, )"
             },
             "Xamarin.Essentials": {
               "target": "Package",

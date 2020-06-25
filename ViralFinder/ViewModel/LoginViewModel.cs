@@ -35,6 +35,21 @@ namespace ViralFinder.ViewModel
                 PropertyChanged(this, new PropertyChangedEventArgs("Password"));
             }
         }
+
+        private bool active;
+        public bool Active
+        {
+            get { return active; }
+            set
+            {
+                active = value;
+                PropertyChanged(this, new PropertyChangedEventArgs("Active"));
+
+            }
+        }
+
+        
+
         public Command LoginCommand
         {
             get
@@ -50,9 +65,13 @@ namespace ViralFinder.ViewModel
             }
         }
 
+
+
         private async void Login()
         {
             //null or empty field validation, check weather email and password is null or empty
+
+            Active = true;
 
             if (string.IsNullOrEmpty(Email) || string.IsNullOrEmpty(Password))
                 await App.Current.MainPage.DisplayAlert("Empty Values", "Please enter Email and Password", "OK");
@@ -64,7 +83,7 @@ namespace ViralFinder.ViewModel
                 if (user != null)
                     if (Email == user.Email && Password == user.Password)
                     {
-                        await App.Current.MainPage.DisplayAlert("Login Success", "", "Ok");
+                        
                         //Navigate to Wellcom page after successfuly login
                         //pass user email to welcom page
 
@@ -75,18 +94,29 @@ namespace ViralFinder.ViewModel
                             var ig = await FirebaseHelper.GetInstaUser(Email); //non so ancora se funziona
                             var insta = new InstaClass(ig.Username, ig.InstaPassword);
                             await insta.InstagramLogin();
+                            Active = false;
                             await App.Current.MainPage.Navigation.PushModalAsync(new PageMaster(insta, user));
                         }
                         else
                         {
+                            Active = false;
+                            await App.Current.MainPage.DisplayAlert("Login Success", "", "Ok");
                             await App.Current.MainPage.Navigation.PushModalAsync(new PageMaster(user));
                         }
 
                     }
                     else
+                    {
+                        Active = false;
                         await App.Current.MainPage.DisplayAlert("Login Fail", "Please enter correct Email and Password", "OK");
+                    }
+
                 else
+                {
+                    Active = false;
                     await App.Current.MainPage.DisplayAlert("Login Fail", "User not found", "OK");
+                }
+                    
             }
         }
     }

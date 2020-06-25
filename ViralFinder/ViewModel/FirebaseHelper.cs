@@ -116,7 +116,7 @@ namespace ViralFinder.ViewModel
             }
         }
 
-<<<<<<< Updated upstream
+
         public static async Task<bool> ExistInstaAccount(string email)
         {
             try
@@ -194,9 +194,6 @@ namespace ViralFinder.ViewModel
                 return false;
             }
         }
-=======
-        
 
->>>>>>> Stashed changes
     }
 }

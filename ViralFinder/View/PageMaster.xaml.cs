@@ -5,6 +5,9 @@ using Xamarin.Forms;
 using ViralFinder.Classi;
 using InstagramApiSharp.API;
 using ViralFinder.Model;
+using System.Linq;
+using SkiaSharp;
+using Microcharts;
 
 namespace ViralFinder.View
 {
@@ -16,32 +19,52 @@ namespace ViralFinder.View
 
         Users user;
 
+        
+
         public PageMaster(Users user)
         {
             this.user = user;
             InitializeComponent();
             pageMasterModel = new PageMasterModel();
             BindingContext = pageMasterModel;
+            
+            
+            
         }
 
         public PageMaster(InstaClass insta, Users user)
         {
+            
             InitializeComponent();
-            pageMasterModel = new PageMasterModel(insta, user);
+            pageMasterModel = new PageMasterModel(insta, user, Grafico, GraficoCommenti);
             BindingContext = pageMasterModel;
             this.insta = insta;   
         }
 
 
 
+
         void impostazioni_Clicked(System.Object sender, System.EventArgs e)
         {
-            Detail = new NavigationPage(new WelcomPage(user));
+            NavigationPage.SetHasNavigationBar(this,false);
+            Detail = new WelcomPage(user);
+            
         }
 
         void Home_Clicked(System.Object sender, System.EventArgs e)
         {
-            Detail = new NavigationPage(new PageMaster(user));
+            NavigationPage.SetHasNavigationBar(this, false);
+            Detail = new PageMaster(insta, user);
+          
+            //Detail = new NavigationPage(new PageMaster(user));
         }
+
+        void ricercheSalvate_Clicked(System.Object sender, System.EventArgs e)
+        {
+            NavigationPage.SetHasNavigationBar(this, false);
+            Detail = new OldHashtag(user);
+           
+        }
+
     }
 }

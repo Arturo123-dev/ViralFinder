@@ -2,10 +2,9 @@
 using System.ComponentModel;
 using Xamarin.Forms;
 using ViralFinder.Classi;
-<<<<<<< Updated upstream
+
 using ViralFinder.Model;
-=======
->>>>>>> Stashed changes
+
 using ViralFinder.View;
 
 namespace ViralFinder.ViewModel
@@ -15,11 +14,10 @@ namespace ViralFinder.ViewModel
         private Users user;
         public InstaLoginModel(Users user)
         {
-<<<<<<< Updated upstream
-            this.user = user;
-=======
 
->>>>>>> Stashed changes
+            this.user = user;
+
+
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -72,7 +70,7 @@ namespace ViralFinder.ViewModel
             var insta = new InstaClass(username, password);
             await insta.InstagramLogin();
 
-<<<<<<< Updated upstream
+
             if(await FirebaseHelper.SaveInstaData(username, password, user))
             {
                 await App.Current.MainPage.DisplayAlert("Login Success", "", "Ok");
@@ -83,14 +81,14 @@ namespace ViralFinder.ViewModel
             }
 
              await App.Current.MainPage.Navigation.PushModalAsync(new PageMaster(insta, user));
-=======
+
             //saveInstaData(username, password);
 
             if (insta.IsLogged())
-                await App.Current.MainPage.Navigation.PushModalAsync(new PageMaster(insta));
+                await App.Current.MainPage.Navigation.PushModalAsync(new PageMaster(insta,user));
             else
                 await App.Current.MainPage.DisplayAlert("DATI INSTAGRAM ERRATI", "", "OK");
->>>>>>> Stashed changes
+
         }
 
        

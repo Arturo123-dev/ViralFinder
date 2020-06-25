@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using InstagramApiSharp;
 using InstagramApiSharp.API;
@@ -28,7 +29,6 @@ namespace ViralFinder.Classi
             api = InstaApiBuilder.CreateBuilder()
                   .SetUser(UserData)
                   .UseLogger(new DebugLogger(LogLevel.All))
-                  .SetRequestDelay(RequestDelay.FromSeconds(0, 1))
                   .Build();
         }
 
@@ -49,7 +49,7 @@ namespace ViralFinder.Classi
             {
                 
                 await api.SendRequestsBeforeLoginAsync();
-                await Task.Delay(2000);
+                
                 var logResult = await api.LoginAsync();
 
                 if (logResult.Succeeded)
@@ -99,9 +99,9 @@ namespace ViralFinder.Classi
                 avg = avg + media.LikesCount;
                
 
-                Console.WriteLine("------------" + media.LikesCount);
+                
             }
-            Console.WriteLine("------------" + avg/i + "--------------");
+            
 
 
 
@@ -120,25 +120,102 @@ namespace ViralFinder.Classi
 
             foreach (InstaMedia media in mediaList)
             {
+               
                 i++;
                 tot = tot + int.Parse(media.CommentsCount);
                
             }
-            Console.WriteLine("----------" + tot / i + "---------");
+            
             return tot / i;
         }
 
 
+        
 
-        public async Task ig(String hashtag)
+        public async Task<List<int>> GetListaLike(String hashtag)
         {
-            var tagFeed = await api.HashtagProcessor.GetRecentHashtagMediaListAsync(hashtag, PaginationParameters.MaxPagesToLoad(2));
+            var tagFeed = await api.HashtagProcessor.GetTopHashtagMediaListAsync(hashtag, PaginationParameters.MaxPagesToLoad(1));
             var list = tagFeed.Value.Medias;
+
+            
+            List<int> ris = new List<int>();
+
+            int n = 0;
+
             foreach(InstaMedia i in list)
             {
-                //
+                n++;
+
+                if (n < 8)
+                {
+                    ris.Add(i.LikesCount);
+                }
+                else
+                    break;
+                
             }
+            return ris;
         }
+
+
+
+        public async Task<List<int>> GetListaComm(String hashtag)
+        {
+            var tagFeed = await api.HashtagProcessor.GetTopHashtagMediaListAsync(hashtag, PaginationParameters.MaxPagesToLoad(1));
+            var list = tagFeed.Value.Medias;
+            
+
+            List<int> ris = new List<int>();
+
+            int n = 0;
+          
+            foreach (InstaMedia i in list)
+            {
+                n++;
+                
+                if (n < 8)
+                {
+                    ris.Add(int.Parse(i.CommentsCount));
+                }
+                else
+                    break;
+
+            }
+        
+            return ris;
+        }
+
+
+        public async Task<long> TempoMedio(string hashtag)
+        {
+            var tagFeed = await api.HashtagProcessor.GetTopHashtagMediaListAsync(hashtag, PaginationParameters.MaxPagesToLoad(1));
+            var list = tagFeed.Value.Medias;
+
+            int n = 0;
+            DateTime ora;
+            ora = DateTime.Now;
+            TimeSpan Conf;
+            int sum = 0;
+
+            foreach(InstaMedia i in list)
+            {
+
+                n++;
+                if (n < 8)
+                {
+                    Conf = ora - i.TakenAt;
+                    sum += Conf.Hours;
+
+                }
+                else
+                    break;
+
+            }
+
+            return sum / n;
+
+        }
+
 
     }
 
