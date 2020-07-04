@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using Firebase.Auth;
+using ViralFinder.Classi;
 using ViralFinder.Model;
+using ViralFinder.ViewModel;
 using Xamarin.Forms;
 
 namespace ViralFinder.View
@@ -10,11 +12,17 @@ namespace ViralFinder.View
     {
 
         Users user;
+        private InstaClass insta;
 
-        public OldHashtag(Users user)
+        OldHashtagModel pageModel;
+
+        public OldHashtag(Users user, InstaClass insta)
         {
             InitializeComponent();
             this.user = user;
+            this.insta = insta;
+            pageModel = new OldHashtagModel();
+            BindingContext = pageModel;
         }
     }
 }

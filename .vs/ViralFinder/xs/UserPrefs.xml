@@ -1,21 +1,28 @@
 ﻿<Properties StartupConfiguration="{8C7ABB75-0DAB-4BF0-B9E0-4733BE9F5E3A}|Default">
   <MonoDevelop.Ide.ItemProperties.ViralFinder.Android PreferredExecutionTarget="Android.pixel_2_pie_9_0_-_api_28" />
-  <MonoDevelop.Ide.ItemProperties.ViralFinder.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.B95619DE-8431-48E7-9272-EB68CDBFFB58" />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.ViralFinder.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.CB6B28FF-089A-405F-877C-23CD7A862458" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="ViralFinder/ViewModel/OldHashtagModel.cs">
+    <Files>
+      <File FileName="ViralFinder/View/OldHashtag.xaml" Line="5" Column="17" />
+      <File FileName="ViralFinder/View/OldHashtag.xaml.cs" Line="25" Column="40" />
+      <File FileName="ViralFinder/ViewModel/OldHashtagModel.cs" Line="1" Column="1" />
+      <File FileName="ViralFinder/View/PageMaster.xaml.cs" Line="18" Column="34" />
+      <File FileName="ViralFinder/ViewModel/PageMasterModel.cs" Line="1" Column="1" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="ViralFinder" expanded="True">
             <Node name="ViralFinder" expanded="True">
-              <Node name="Classi" expanded="True">
-                <Node name="InstaClass.cs" selected="True" />
-              </Node>
+              <Node name="Classi" expanded="True" />
               <Node name="Model" expanded="True" />
               <Node name="View" expanded="True">
                 <Node name="OldHashtag.xaml" expanded="True" />
                 <Node name="PageMaster.xaml" expanded="True" />
               </Node>
-              <Node name="ViewModel" expanded="True" />
+              <Node name="ViewModel" expanded="True">
+                <Node name="OldHashtagModel.cs" selected="True" />
+              </Node>
             </Node>
             <Node name="ViralFinder.iOS" expanded="True" />
           </Node>

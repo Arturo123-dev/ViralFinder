@@ -73,6 +73,7 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Model\InstaSearch.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Model\InstaSearchData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModel\OldHashtagModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Model\" />
