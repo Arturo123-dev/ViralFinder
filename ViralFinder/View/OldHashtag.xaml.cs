@@ -21,7 +21,7 @@ namespace ViralFinder.View
             InitializeComponent();
             this.user = user;
             this.insta = insta;
-            pageModel = new OldHashtagModel();
+            pageModel = new OldHashtagModel(user, insta);
             BindingContext = pageModel;
         }
     }
