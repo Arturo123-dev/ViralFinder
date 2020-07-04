@@ -195,5 +195,50 @@ namespace ViralFinder.ViewModel
             }
         }
 
+        public static async Task<bool> SaveInstaSearch(string email, string hashtag, long n, long like)
+        {
+            try
+            {
+
+
+                var toUpdateUser = (await firebase
+                .Child("Users")
+                .OnceAsync<Users>()).Where(a => a.Object.Email == email).FirstOrDefault();
+
+                List<InstaSearchData> instaData;
+
+                if (toUpdateUser.Object.InstaSearch == null)
+                {
+                    instaData = new List<InstaSearchData>();
+                    instaData.Add(new InstaSearchData(hashtag, n, like));
+                }
+                else
+                {
+                    instaData = toUpdateUser.Object.InstaSearch.data;
+                    instaData.Add(new InstaSearchData(hashtag, n, like));
+                }
+
+                
+
+                await firebase
+                .Child("Users")
+                .Child(toUpdateUser.Key)
+                .PutAsync(new Users() {
+                    Email = toUpdateUser.Object.Email,
+                    Password = toUpdateUser.Object.Password,
+                    IgUser = new InstagramUser(toUpdateUser.Object.IgUser.Username, toUpdateUser.Object.IgUser.InstaPassword),
+                    InstaSearch = new InstaSearch() {
+                        data = instaData,
+                    },
+                });
+                return true;
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine($"Error:{e}");
+                return false;
+            }
+        }
+
     }
 }

@@ -6579,20 +6579,20 @@
     ]
   },
   "packageFolders": {
-    "/Users/fabriziopiccolo/.nuget/packages/": {}
+    "/Users/chris/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/fabriziopiccolo/Projects/ViralFinder/ViralFinder.iOS/ViralFinder.iOS.csproj",
+      "projectUniqueName": "/Users/chris/Projects/ViralFinder/ViralFinder.iOS/ViralFinder.iOS.csproj",
       "projectName": "ViralFinder.iOS",
-      "projectPath": "/Users/fabriziopiccolo/Projects/ViralFinder/ViralFinder.iOS/ViralFinder.iOS.csproj",
-      "packagesPath": "/Users/fabriziopiccolo/.nuget/packages/",
-      "outputPath": "/Users/fabriziopiccolo/Projects/ViralFinder/ViralFinder.iOS/obj/",
+      "projectPath": "/Users/chris/Projects/ViralFinder/ViralFinder.iOS/ViralFinder.iOS.csproj",
+      "packagesPath": "/Users/chris/.nuget/packages/",
+      "outputPath": "/Users/chris/Projects/ViralFinder/ViralFinder.iOS/obj/",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
-        "/Users/fabriziopiccolo/.config/NuGet/NuGet.Config"
+        "/Users/chris/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "xamarinios10"

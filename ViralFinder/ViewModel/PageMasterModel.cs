@@ -195,8 +195,8 @@ namespace ViralFinder.ViewModel
 
             long tempo = await insta.TempoMedio(hashtag);
             Punteggio = (like / comm / tempo).ToString();
-            
 
+            await FirebaseHelper.SaveInstaSearch(user.Email, hashtag, n, like);
         }
     }
 }

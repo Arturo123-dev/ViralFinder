@@ -5640,20 +5640,20 @@
     ]
   },
   "packageFolders": {
-    "/Users/fabriziopiccolo/.nuget/packages/": {}
+    "/Users/chris/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/fabriziopiccolo/Projects/ViralFinder/ViralFinder.Android/ViralFinder.Android.csproj",
+      "projectUniqueName": "/Users/chris/Projects/ViralFinder/ViralFinder.Android/ViralFinder.Android.csproj",
       "projectName": "ViralFinder.Android",
-      "projectPath": "/Users/fabriziopiccolo/Projects/ViralFinder/ViralFinder.Android/ViralFinder.Android.csproj",
-      "packagesPath": "/Users/fabriziopiccolo/.nuget/packages/",
-      "outputPath": "/Users/fabriziopiccolo/Projects/ViralFinder/ViralFinder.Android/obj/",
+      "projectPath": "/Users/chris/Projects/ViralFinder/ViralFinder.Android/ViralFinder.Android.csproj",
+      "packagesPath": "/Users/chris/.nuget/packages/",
+      "outputPath": "/Users/chris/Projects/ViralFinder/ViralFinder.Android/obj/",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
-        "/Users/fabriziopiccolo/.config/NuGet/NuGet.Config"
+        "/Users/chris/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "monoandroid90"

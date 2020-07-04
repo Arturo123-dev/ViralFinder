@@ -71,6 +71,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)View\OldHashtag.xaml.cs">
       <DependentUpon>OldHashtag.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Model\InstaSearch.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\InstaSearchData.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Model\" />
