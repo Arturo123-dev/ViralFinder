@@ -38,7 +38,8 @@ namespace ViralFinder.View
             InitializeComponent();
             pageMasterModel = new PageMasterModel(insta, user, Grafico, GraficoCommenti);
             BindingContext = pageMasterModel;
-            this.insta = insta;   
+            this.insta = insta;
+            this.user = user;
         }
 
 
@@ -62,7 +63,7 @@ namespace ViralFinder.View
         void ricercheSalvate_Clicked(System.Object sender, System.EventArgs e)
         {
             NavigationPage.SetHasNavigationBar(this, false);
-            Detail = new OldHashtag(user, insta);
+            Detail = new OldHashtag(this.user, insta);
            
         }
 

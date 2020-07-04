@@ -13,7 +13,7 @@
 namespace ViralFinder.View {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("/Users/chris/Projects/ViralFinder/ViralFinder/View/XF_SignUpPage.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("/Users/fabriziopiccolo/Projects/ViralFinder/ViralFinder/View/XF_SignUpPage.xaml")]
     public partial class XF_SignUpPage : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]

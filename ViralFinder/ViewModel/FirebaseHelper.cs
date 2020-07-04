@@ -244,11 +244,20 @@ namespace ViralFinder.ViewModel
         {
             try
             {
-                var toUpdateUser = (await firebase
+                var userlist = (await firebase
                 .Child("Users")
-                .OnceAsync<Users>()).Where(a => a.Object.Email == email).FirstOrDefault();
+                .OnceAsync<Users>()).Select(item =>
+                new Users
+                {
+                    Email = item.Object.Email,
+                    IgUser = item.Object.IgUser,
+                    InstaSearch = item.Object.InstaSearch,
 
-                return toUpdateUser.Object.InstaSearch.data;
+                }).ToList();
+
+                var ig = userlist.Where(a => a.Email == email).FirstOrDefault();
+
+                return ig.InstaSearch.data;
             }
             catch (Exception e)
             {

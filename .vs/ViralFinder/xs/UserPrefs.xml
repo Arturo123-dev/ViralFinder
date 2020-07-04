@@ -1,14 +1,16 @@
 ﻿<Properties StartupConfiguration="{8C7ABB75-0DAB-4BF0-B9E0-4733BE9F5E3A}|Default">
   <MonoDevelop.Ide.ItemProperties.ViralFinder.Android PreferredExecutionTarget="Android.pixel_2_pie_9_0_-_api_28" />
-  <MonoDevelop.Ide.ItemProperties.ViralFinder.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.B95619DE-8431-48E7-9272-EB68CDBFFB58" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="ViralFinder/View/PageMaster.xaml.cs">
+  <MonoDevelop.Ide.ItemProperties.ViralFinder.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.CB6B28FF-089A-405F-877C-23CD7A862458" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="ViralFinder.iOS/Main.cs">
     <Files>
-      <File FileName="ViralFinder/ViewModel/FirebaseHelper.cs" Line="258" Column="10" />
-      <File FileName="ViralFinder/ViewModel/OldHashtagModel.cs" Line="25" Column="25" />
-      <File FileName="ViralFinder/View/PageMaster.xaml.cs" Line="65" Column="1" />
+      <File FileName="ViralFinder/View/OldHashtag.xaml" Line="12" Column="31" />
       <File FileName="ViralFinder/View/OldHashtag.xaml.cs" Line="24" Column="1" />
-      <File FileName="ViralFinder.iOS/obj/iPhoneSimulator/Debug/View/OldHashtag.xaml.g.cs" Line="25" Column="1" />
-      <File FileName="ViralFinder/View/OldHashtag.xaml" Line="28" Column="27" />
+      <File FileName="ViralFinder/ViewModel/OldHashtagModel.cs" Line="43" Column="1" />
+      <File FileName="ViralFinder/View/PageMaster.xaml.cs" Line="66" Column="1" />
+      <File FileName="ViralFinder/ViewModel/PageMasterModel.cs" Line="45" Column="1" />
+      <File FileName="ViralFinder/ViewModel/LoginViewModel.cs" Line="81" Column="1" />
+      <File FileName="ViralFinder/ViewModel/FirebaseHelper.cs" Line="247" Column="1" />
+      <File FileName="ViralFinder.iOS/Main.cs" Line="17" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -19,22 +21,26 @@
               <Node name="Model" expanded="True" />
               <Node name="View" expanded="True">
                 <Node name="OldHashtag.xaml" expanded="True" />
-                <Node name="PageMaster.xaml" expanded="True">
-                  <Node name="PageMaster.xaml.cs" selected="True" />
-                </Node>
+                <Node name="PageMaster.xaml" expanded="True" />
               </Node>
               <Node name="ViewModel" expanded="True" />
             </Node>
-            <Node name="ViralFinder.iOS" expanded="True" />
+            <Node name="ViralFinder.iOS" expanded="True">
+              <Node name="Main.cs" selected="True" />
+            </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches>
+    <Watch file="../../../ViralFinder/View/PageMaster.xaml.cs" line="64" column="36" endLine="64" endColumn="45" offsetX="-1" offsetY="-1" expression="this.user" liveUpdate="False" />
+  </MonoDevelop.Ide.DebuggingService.PinnedWatches>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/fabriziopiccolo/Projects/ViralFinder/ViralFinder/View/PageMaster.xaml.cs" relfile="ViralFinder/View/PageMaster.xaml.cs" line="66" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>
