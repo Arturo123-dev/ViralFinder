@@ -62,7 +62,7 @@ namespace ViralFinder.View
         void ricercheSalvate_Clicked(System.Object sender, System.EventArgs e)
         {
             NavigationPage.SetHasNavigationBar(this, false);
-            Detail = new OldHashtag(user);
+            Detail = new OldHashtag(user, insta);
            
         }
 

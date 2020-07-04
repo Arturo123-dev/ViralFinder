@@ -13,7 +13,7 @@
 namespace ViralFinder {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("/Users/fabriziopiccolo/Projects/ViralFinder/ViralFinder/App.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("/Users/chris/Projects/ViralFinder/ViralFinder/App.xaml")]
     public partial class App : global::Xamarin.Forms.Application {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]

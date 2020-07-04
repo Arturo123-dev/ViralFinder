@@ -240,5 +240,22 @@ namespace ViralFinder.ViewModel
             }
         }
 
+        public static async Task<List<InstaSearchData>> GetInstaSearchData(String email)
+        {
+            try
+            {
+                var toUpdateUser = (await firebase
+                .Child("Users")
+                .OnceAsync<Users>()).Where(a => a.Object.Email == email).FirstOrDefault();
+
+                return toUpdateUser.Object.InstaSearch.data;
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine($"Error:{e}");
+                return null;
+            }
+        }
+
     }
 }

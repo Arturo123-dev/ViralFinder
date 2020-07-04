@@ -40,3 +40,11 @@
 /Library/Frameworks/Xamarin.iOS.framework/Versions/13.16.0.13/lib/mono/Xamarin.iOS/Facades/System.ValueTuple.dll
 /Library/Frameworks/Xamarin.iOS.framework/Versions/13.16.0.13/lib/mono/Xamarin.iOS/Facades/System.Runtime.Extensions.dll
 /Library/Frameworks/Xamarin.iOS.framework/Versions/13.16.0.13/lib/mono/Xamarin.iOS/Facades/System.Linq.dll
+/Users/chris/.nuget/packages/firebaseauthentication.net/3.4.0/lib/netstandard1.1/Firebase.Auth.dll
+/Library/Frameworks/Xamarin.iOS.framework/Versions/13.16.0.13/lib/mono/Xamarin.iOS/Facades/System.Diagnostics.Debug.dll
+/Library/Frameworks/Xamarin.iOS.framework/Versions/13.16.0.13/lib/mono/Xamarin.iOS/Facades/System.Reflection.dll
+/Library/Frameworks/Xamarin.iOS.framework/Versions/13.16.0.13/lib/mono/Xamarin.iOS/Facades/System.Threading.Tasks.dll
+/Library/Frameworks/Xamarin.iOS.framework/Versions/13.16.0.13/lib/mono/Xamarin.iOS/Facades/System.Runtime.Serialization.Primitives.dll
+/Library/Frameworks/Xamarin.iOS.framework/Versions/13.16.0.13/lib/mono/Xamarin.iOS/Facades/System.Reflection.Extensions.dll
+/Library/Frameworks/Xamarin.iOS.framework/Versions/13.16.0.13/lib/mono/Xamarin.iOS/Facades/System.Threading.dll
+/Library/Frameworks/Xamarin.iOS.framework/Versions/13.16.0.13/lib/mono/Xamarin.iOS/Facades/System.Text.Encoding.dll
