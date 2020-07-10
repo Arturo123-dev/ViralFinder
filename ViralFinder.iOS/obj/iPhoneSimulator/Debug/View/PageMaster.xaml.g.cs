@@ -13,7 +13,7 @@
 namespace ViralFinder.View {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("/Users/fabriziopiccolo/Projects/ViralFinder/ViralFinder/View/PageMaster.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("/Users/chris/Projects/ViralFinder/ViralFinder/View/PageMaster.xaml")]
     public partial class PageMaster : global::Xamarin.Forms.MasterDetailPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
@@ -23,13 +23,13 @@ namespace ViralFinder.View {
         private global::Xamarin.Forms.Button Home;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::Xamarin.Forms.Button ricercheSalvate;
-        
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private global::Xamarin.Forms.Entry Hashtag;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private global::Xamarin.Forms.Button Search;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
+        private global::Xamarin.Forms.Button Recenti;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private global::Xamarin.Forms.Label Npost;
@@ -54,9 +54,9 @@ namespace ViralFinder.View {
             global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(PageMaster));
             impostazioni = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Button>(this, "impostazioni");
             Home = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Button>(this, "Home");
-            ricercheSalvate = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Button>(this, "ricercheSalvate");
             Hashtag = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Entry>(this, "Hashtag");
             Search = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Button>(this, "Search");
+            Recenti = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Button>(this, "Recenti");
             Npost = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "Npost");
             Grafico = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Microcharts.Forms.ChartView>(this, "Grafico");
             AvgLike = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "AvgLike");

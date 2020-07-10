@@ -10,25 +10,33 @@ namespace ViralFinder.ViewModel
 {
     public class OldHashtagModel
     {
+        private ObservableCollection<string> hashtags;
 
         private InstaClass insta = null;
         private Users user;
         private List<InstaSearchData> lista;
-        public OldHashtagModel(Users user, InstaClass insta)
+        public OldHashtagModel(Users user, InstaClass insta, List<InstaSearchData> data)
         {
             this.user = user;
             this.insta = insta;
-            OnAppering();
+            this.lista = data;
+            Hashtagss();
+        }
 
-            foreach (InstaSearchData hash in lista)
+        public void Hashtagss()
+        {
+
+            hashtags = new ObservableCollection<string>();
+
+            foreach (InstaSearchData hash in this.lista)
             {
-                Hashtags.Add(hash);
+                Hashtags.Add(hash.Hastag);
             }
 
         }
 
-        private ObservableCollection<InstaSearchData> hashtags;
-        public ObservableCollection<InstaSearchData> Hashtags
+
+        public ObservableCollection<string> Hashtags
         {
             get { return hashtags; }
             set
@@ -36,14 +44,6 @@ namespace ViralFinder.ViewModel
                 hashtags = value;
             }
         }
-
-        protected async void OnAppering()
-        {
-
-            this.lista = await FirebaseHelper.GetInstaSearchData(user.Email);
-
-        }
-
 
 
     }

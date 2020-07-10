@@ -27,6 +27,7 @@
 
                 <Entry Text="{Binding Password}"
                        Placeholder="Password"
+                       IsPassword="True"
                        AbsoluteLayout.LayoutBounds="0.5,0.4"
                        AbsoluteLayout.LayoutFlags="PositionProportional"
                        />

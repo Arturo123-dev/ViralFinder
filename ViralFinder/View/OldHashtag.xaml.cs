@@ -16,12 +16,12 @@ namespace ViralFinder.View
 
         OldHashtagModel pageModel;
 
-        public OldHashtag(Users user, InstaClass insta)
+        public OldHashtag(Users user, InstaClass insta, List<InstaSearchData> data)
         {
             InitializeComponent();
             this.user = user;
             this.insta = insta;
-            pageModel = new OldHashtagModel(user, insta);
+            pageModel = new OldHashtagModel(user, insta, data);
             BindingContext = pageModel;
         }
     }

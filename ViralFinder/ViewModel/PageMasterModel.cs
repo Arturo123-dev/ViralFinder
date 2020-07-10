@@ -15,6 +15,7 @@ using Microcharts;
 using System.Collections.Generic;
 using SkiaSharp;
 using System.Threading.Tasks;
+using ViralFinder.View;
 
 namespace ViralFinder.ViewModel
 {
@@ -100,6 +101,21 @@ namespace ViralFinder.ViewModel
             }
         }
 
+        public Command RicerchePremuto
+        {
+            get
+            {
+                return new Command(Recenti);
+            }
+        }
+
+        private async void Recenti()
+        {
+
+            List<InstaSearchData> lista = await FirebaseHelper.GetInstaSearchData(user.Email);
+            await Application.Current.MainPage.Navigation.PushModalAsync(new OldHashtag(user, insta, lista));
+        }
+
 
         public Command SearchCommand
         {
@@ -167,13 +183,7 @@ namespace ViralFinder.ViewModel
 
         private async void Search()
         {
-            // passa qui l'hashtag per salvarlo in quelli cercati precedentemente da visualizzare su "OldHashtag"
-            // da salvare con:
-            // 1) hasthag
-            // 2) N° post
-            // 3) N° Like medio
-
-
+            
 
             long n = await insta.GetHashtagNumber(hashtag);
             Npost = "N° POST #" + hashtag + ": " + n.ToString();

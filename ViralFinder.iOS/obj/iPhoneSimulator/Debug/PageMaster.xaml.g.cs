@@ -13,7 +13,7 @@
 namespace ViralFinder.View {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("/Users/fabriziopiccolo/Projects/ViralFinder/ViralFinder/View/PageMaster.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("/Users/chris/Projects/ViralFinder/ViralFinder/View/PageMaster.xaml")]
     public partial class PageMaster : global::Xamarin.Forms.MasterDetailPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
